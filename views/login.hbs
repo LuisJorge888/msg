@@ -1,0 +1,26 @@
+<link href="/public/css/login.css" rel="stylesheet">
+
+{{#if msg }}
+  <div class="alert alert-danger" role="alert">
+    {{msg}}
+  </div>
+{{/if}}
+
+<form class="formLogin" action="/actionlogin" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label letras">Usuario</label>
+    <input required type="text" class="form-control" id="txtUsuario" name="txtUsuario" placeholder="Usuario" aria-describedby="emailHelp">
+    
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label letras">Contraseña</label>
+    <input required type="password" class="form-control" id="txtPwd" name="txtPwd" placeholder="Contraseña">
+  </div>
+  <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+  <div class="mb-3 hrefLogin">
+    <a href="/register">No tienes cuenta? create una</a></li>
+  </div>
+</form>

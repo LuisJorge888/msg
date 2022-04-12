@@ -1,0 +1,21 @@
+.formLogin {
+    width: 30%; 
+    margin: auto; 
+    margin-top: auto; 
+    margin-top: 10%;
+    background-color: #212529;
+    padding-bottom: 5%;
+    border-radius: 5%;
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 2%;
+}
+
+.hrefLogin {
+    margin-top: 2%;
+    color: white;
+}
+
+a {
+    color: white;
+}

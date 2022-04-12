@@ -1,0 +1,42 @@
+<link href="/public/css/chat.css" rel="stylesheet">
+
+<div class="container-fluid" style="min-height: 88vh;     padding-right: 0px;">
+  <div style="height: 100%;
+    width: 100%;display: inline-flex;">
+    <div style="height: 100%;width: 30%;display: inline;">
+      <input id="buscadosContatoc" type="text" placeholder="Buscar en mis contactos">
+      </input>
+
+      <div class="list-group" id="list-tab" role="tablist">
+        {{#each contactos}}
+        <label class="contactoDiv list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+          href="#list-profile" role="tab" aria-controls="list-profile">{{this.us_user}}</label>
+        {{/each}}
+      </div>
+    </div>
+    <div style="width: 70%;display: inline;">
+
+      <div style="height: 10%; border: solid #464141;" class="dark">A</div>
+      <div style="height: 80%; background-color: green;"></div>
+      <div style="height: 10%;">
+        <div class="input-group mb-3">
+          <input id="txtBody" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+          <button type="button" class="btn btn-primary" id="btnSend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
+              viewBox="0 0 16 16">
+              <path
+                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z">
+              </path>
+            </svg>
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script src="/public/js/chat.js" charset="utf-8"></script>
